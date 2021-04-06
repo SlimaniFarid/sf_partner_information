@@ -1,0 +1,128 @@
+h1{
+    color:green;
+}
+.backgroundimage{
+
+position:absolute;font-size:3em;width:50%;height:100%;z-index:1000;
+
+
+}
+
+#NIE{
+    position: fixed;
+    top:200px;
+    left:120px;
+    
+
+}
+
+#N_pass{
+    position: fixed;
+    top:203px;
+    left:650px;
+
+}
+#fisrt_appllido{
+    position: fixed;
+    top:230px;
+    left:113px;
+    line-height:4px;
+   
+} 
+#second_appllido{
+    position: fixed;
+    top:231px;
+    left:648px;
+    line-height:2px;
+   
+} 
+
+#nombre{
+    position: fixed;
+    top:255px;
+    left:113px;
+    line-height:2px;
+   
+} 
+
+#ficha{
+    position: fixed;
+    top:275px;
+    left:162px;
+    line-height:8px;
+   
+} 
+#lugar{
+    position: fixed;
+    top:275px;
+    left:385px;
+    line-height:6px;
+   
+} 
+#pais{
+    position: fixed;
+    top:275px;
+    left:760px;
+    line-height:6px;
+   
+} 
+#nom_padre{
+    position: fixed;
+    top:297px;
+    left:145px;
+    line-height:6px;
+   
+} 
+#nom_madre{
+    position: fixed;
+    top:297px;
+    left:600px;
+    line-height:6px;
+   
+} 
+#nationalida{
+    position: fixed;
+    top:320px;
+    left:145px;
+    line-height:6px;
+   
+} 
+#email{
+    position: fixed;
+    top:392px;
+    left:550px;
+    line-height:6px;
+   
+} 
+#telephone{
+    position: fixed;
+    top:392px;
+    left:115px;
+    line-height:6px;
+   
+} 
+#cp{
+    position: fixed;
+    top:370px;
+    left:605px;
+    line-height:6px;
+   
+} 
+#num{
+    position: fixed;
+    top:345px;
+    left:628px;
+    line-height:6px;
+    
+   
+} 
+#sexo1{
+    position: fixed;
+    top:248px;
+    left:820px;
+    line-height:6px;
+    
+
+
+
+}

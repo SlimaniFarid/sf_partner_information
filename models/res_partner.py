@@ -6,14 +6,14 @@ from odoo import models, fields, api
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-
+    reports_name      = fields.Text('reports name')    
     family_situation = fields.Selection(string='Family situation',selection=[('single', 'Single'),('married', 'Married'),('divorced', 'Divorced')])
     Place_of_birth   = fields.Char('Place of birth')  
     Profession       = fields.Selection(string='Profession',selection=[('entrepreneur','Entrepreneur'),('student','Student'),('employee','Employee'),('sector','Sector'),('retired','Retired'),])
     passport_number  = fields.Char('Passport number')
     delivered_by     = fields.Char('Delivered by') 
-    Passport_delivery_date   = fields.Char('Passport delivery date')
-    Passport_expiration_date = fields.Char('Passport expiration date')
+    Passport_delivery_date   = fields.Date('Passport delivery date')
+    Passport_expiration_date = fields.Date('Passport expiration date')
     Spouses_name     = fields.Char("Spouse's name")
     Fathers_name     = fields.Char("Father's name")
     document_type    = fields.Char("Document type")
@@ -34,7 +34,13 @@ class ResPartner(models.Model):
                                                                              ('consular_office','Consular office'),
                                                                     
                                                                                     ])   
-    
-    
-
+    def do_print_report(self,id):
+       report_obj = self.env['ir.actions.report']
+       # report = report_obj._get_report_from_name('account.account_invoices')
+       # return {
+       #      'doc_ids': [1],
+       #      'doc_model': 'account.move',
+       #      'docs': self,
+       #  }
+       # return self.env.ref('').report_action(id)
 

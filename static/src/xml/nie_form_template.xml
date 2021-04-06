@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <template id="nie_form" name="NIE Form" >
+            <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <section class="pt8 pb8">
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-12 s_title pt16 pb16">
+                                    <h1>Request NIE</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="container mt-2">
+                    <div class="row">
+                    <div class="col-lg-8">
+                        <form id="helpdesk_ticket_form" action="/form_nie" method="post" enctype="multipart/form-data"  hide-change-model="false" >
+                          
+                             <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Name">Your Name</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="Name" required=""/>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Phone">Phone Number</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="Phone"/>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="email_from">Email</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="email" class="form-control o_website_form_input" name="email_from" required=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Place_of_birth">Place of birth</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="Place_of_birth" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="family_situation">Family situation</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select class="form-control o_website_form_input" name="family_situation" id="family_situation">
+                                        <option></option>
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                        <option value="divorced">Divorced</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Profession">Profession</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select class="form-control o_website_form_input" name="Profession" id="Profession" requireddd="">
+                                        <option></option>
+                                        <option value="entrepreneur">Entrepreneur</option>
+                                        <option value="student">Student</option>
+                                        <option value="employee">Employee</option>
+                                        <option value="sector">Sector</option>
+                                        <option value="retired">Retired</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Spouses_name">Spouses name</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="Spouses_name" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Fathers_name">Fathers name</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="Fathers_name" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="document_type">Document type</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="document_type" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="reasons">Reasons</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select class="form-control o_website_form_input" name="reasons" id="reasons" requireddd="">
+                                        <option></option>
+                                        <option value="For_economic_interests">For economic interests</option>
+                                        <option value="for_professional_interests">For professional interests</option>
+                                        <option value="for_social_interests">For social interests</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="specify">Specify</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select class="form-control o_website_form_input" name="specify" id="specify" requireddd="">
+                                        <option></option>
+                                        <option value="company_creation">Company creation</option>
+                                        <option value="studies">Studies</option>
+                                        <option value="buy_hous">Buy hous</option>
+                                        <option value="open_bank_account">Open bank account</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="place_of_presentation">Place of presentation</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <select class="form-control o_website_form_input" name="place_of_presentation" id="place_of_presentation" requireddd="">
+                                        <option></option>
+                                        <option value="immigration_Office">Immigration office</option>
+                                        <option value="police_station">Police station</option>
+                                        <option value="consular_office">Consular office</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="passport_number">Passport number</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="passport_number" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="delivered_by">Delivered by</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="delivered_by" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Passport_delivery_date">Passport delivery date</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="date" class="form-control o_website_form_input" name="Passport_delivery_date" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="Passport_expiration_date">Passport expiration date</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="date" class="form-control o_website_form_input" name="Passport_expiration_date" requireddd=""/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="foreigner_identity_number">Foreigner identity number</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="foreigner_identity_number" requireddd=""/>
+                                </div>
+                            </div>
+                          
+
+                            <div class="form-group row">
+                                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                                    <!-- <a href="/form_nie" class="btn btn-primary btn-lg o_website_form_send" >Send</a> -->
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                    <span id="o_website_form_result" ></span>
+                                </div>
+                            </div>
+                        </form>    
+                        </div>  
+                          
+                        <div class="col-lg-4">
+                            <t t-call="website.company_description"/>
+                        </div>
+                    
+                    </div>    
+                </div>    
+            </div>    
+        </t>
+    </template>
+    <template id="nie_form_thanks" name="NIE Form Thanks" >
+        <t t-call="website.layout">
+                <div id="wrap">
+                <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_1"/>
+                <div class="container pt-3">
+                    <h1>Thanks !</h1>
+                    <ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                        <li class="list-group-item flex-grow-1">
+                            <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                <div class="btn-group  flex-grow-1 mr-1 mb-1">
+                                    <a class="btn btn-secondary btn-block o_download_btn" href="/print_report_1" title="Download"><i class="fa fa-download"/> Download</a>
+                                </div>
+                                <div class="btn-group flex-grow-1 mb-1">
+                                    <!-- <a class="btn btn-secondary btn-block o_print_btn o_portal_invoice_print" t-att-href="invoice.get_portal_url(report_type='pdf')" id="print_invoice_report" title="Print" target="_blank"><i class="fa fa-print"/> Print</a> -->
+                                </div>
+                            </div>
+                        </li>
+                    </ul>    
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="alert alert-success" role="status">
+                                Your message has been sent successfully.
+                                <button type="button" class="close" data-dismiss="alert">&amp;times;</button>
+                            </div>
+                            <p>
+                                We will get back to you shortly.
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <t t-call="website.company_description"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure" id="oe_structure_website_form_contact_us_thanks_2"/>
+                </div>
+            
+        </t>
+    </template>
+
+
+     
+</odoo>

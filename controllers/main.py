@@ -6,6 +6,13 @@ from odoo.http import request
 from odoo.addons.website_crm.controllers.main import WebsiteForm
 import logging
 _logger = logging.getLogger(__name__)
+import io
+import re
+from PyPDF2 import  PdfFileReader, PdfFileWriter
+import base64
+import werkzeug
+from werkzeug import urls
+import ast
 
 class WebsiteForm(WebsiteForm):
 
@@ -23,23 +30,42 @@ class WebsiteForm(WebsiteForm):
     def contactus(self, **kwargs):
         return request.render("website_crm.contactus_form")
       
-  
+    @http.route('/my_form_nie', type='http', auth="user", website=True)
+    def my_form_nie(self, **kwargs):
+        return request.render("sf_partner_information.nie_form")
+      
+
 
     # Check and insert values from the form on the model <model> + validation phone fields
-    @http.route('/website_form/<string:model_name>', type='http', auth="user", methods=['POST'], website=True)
-    def website_form(self, model_name, **kwargs):
+    @http.route('/form_nie', type='http', auth="user", methods=['POST'], website=True, csrf=False)
+    def form_nie(self, **kwargs):
         user = request.env['res.users'].search([('id','=',request.session.uid)])    
-        _logger.warning('\n ok ok user =>%s',user)
         user.partner_id.write({
                                'Place_of_birth':kwargs.get('Place_of_birth'),
                                'Passport_delivery_date':kwargs.get('Passport_delivery_date'),
                                'Passport_delivery_date':kwargs.get('Passport_delivery_date'),
                                'specify':kwargs.get('specify'),
+                               'reports_name':"['sf_partner_information.report_formulaire']"
+                             
         })
+       
+        return request.render("sf_partner_information.nie_form_thanks")
+        
 
-   
 
-        return super(WebsiteForm, self).website_form(model_name, **kwargs)
+    @http.route('/print_report_1', auth="user",type='http' )
+    def print_report(self,**kwargs):
+        pdf_writer = PdfFileWriter()
+        partner = request.env.user.partner_id
+        _logger.warning('\n ok ok partner.reports_name=>%s',partner.reports_name)
+
+        report_name = ast.literal_eval(partner.reports_name)[0]
+
+        report = request.env['ir.actions.report'].search([('report_name','=',report_name)])
+        pdf_content =  report.render_qweb_pdf(partner.id)[0]        
+        pdfhttpheaders = [('Content-Type', 'application/pdf'), ('Content-Length', len(pdf_content)),('Content-Disposition', 'attachment; filename='+partner.name+'.pdf'),]
+        return request.make_response(pdf_content, headers=pdfhttpheaders)       
+
 
     def insert_record(self, request, model, values, custom, meta=None):
         if model.model == 'crm.lead':

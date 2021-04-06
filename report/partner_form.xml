@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+        
+        <report
+            id="report_form_card"
+            string="Model insecription form"
+            model="res.partner"
+            report_type="qweb-pdf"
+            name="sf_partner_information.report_formulaire"
+            file="sf_partner_information.report_formulaire"
+            paperformat="sf_partner_information.paperformat_on_header"/>
+
+</odoo>

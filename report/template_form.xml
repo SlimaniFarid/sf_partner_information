@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_formulaire">
+         <t t-call="web.external_layout">
+         <t t-call="web.html_container">
+         
+            <t t-foreach="docs" t-as="o">
+            <link rel="stylesheet" href="/sf_partner_information/static/src/css/style.css"/>
+            
+
+                
+
+                <div class="page" t-attf-style="background-image:url('/sf_partner_information/static/src/img/background_form.jpg');
+                width: 100%; height: 1300px; background-size: 105%;">
+                 <!--210 x 297  width: 100%; height: 1300px;-->
+                
+                <span id="NIE" t-field=" o.foreigner_identity_number">123456789</span>
+
+                <span id="N_pass" t-field="o.passport_number">15697542336</span>
+
+                <span id="fisrt_appllido">karim</span> 
+
+                <span id="second_appllido">krimo</span>
+
+                <span id="nombre" t-field="o.name">kiche</span> 
+
+
+                <t t-if="o.gender=='male'">
+                <span id="sexo1"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                 </t>
+                <span id="ficha" t-field="o.birthdate_date">444653626956123126</span> 
+
+                <span id="lugar" t-field="o.Place_of_birth">alger</span> 
+
+                
+
+
+
+
+               
+               <span id="pais">algerie</span>
+               
+               
+               
+               <span id="domicilo_es">boumerdes</span>
+               <span id="telephone" t-field="o.phone">06669895623</span>
+               <span id="email" t-field="o.email"></span> 
+               <span id="cp" t-field="o.zip">35000</span> 
+               <span id="num" >numero</span> 
+
+               
+                
+
+
+
+
+
+
+
+                <span id="nationalida"   t-field="o.nationality_id" >russia</span> 
+
+                <span id="estado_civil" t-field="o.family_situation">non de client</span> 
+
+                <span id="nom_padre"  t-field="o.Fathers_name" >pppppppp</span> 
+                <span id="nom_madre">mmmmmmmmmm</span> 
+                <span id="nom_madre">mmmmmmmmmm</span> 
+                 
+                 
+                
+                </div>
+
+               <!-- <div class="backgroundimage">
+                    <img src="/partner_report/static/description/background_form.jpg"/>
+                    <h1>dhjdfyhjldfjkklmhdkfhmk</h1>
+                </div>-->
+
+
+                <!--
+
+                      <t t-foreach="o.child_ids" t-as="child">
+                    
+               
+               <t t-if="child.type=='private'">
+               <span id="pais" t-esc="child.country_id">algerie</span>
+               
+               <span id="pais" t-esc="child.country_id" />
+               
+               <span id="domicilo_es"></span>
+               <span id="telephone" t-esc="child.phone"></span>
+               <span id="email" t-esc="child.email"></span> 
+               
+               </t>
+               
+                
+                 </t>
+                -->
+                
+      
+             </t>
+        </t>
+        </t>
+
+    </template>
+
+</odoo>

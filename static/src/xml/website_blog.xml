@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <template id="post_heading" name="Post heading" inherit_id="website_blog.post_heading" >
+        <xpath expr="//a[1]" position="attributes">
+            <attribute name="t-attf-class">text-reset text-decoration-none o_blog_post_title my-0 #{'h3' if opt_blog_list_view else ('h5' if opt_blog_readable else 'h6')}</attribute>
+        </xpath>
+
+        <xpath expr="//a" position="after">
+            <a href="/my_form_nie" class="float-right">Fill in the form</a>
+        </xpath>
+    </template>
+
+    <template id="blog_post_content" name="Blog post content" inherit_id="website_blog.blog_post_content" >
+        <xpath expr="//div[@t-if='len(blogs) > 1 or len(blog_post.tag_ids) > 0']" position="before">
+             <a href="/my_form_nie" class="float-right btn btn-outline-primary">Fill in the form</a>
+        </xpath>
+
+    </template>
+     
+</odoo>
