@@ -17,7 +17,10 @@ class DocPortal(CustomerPortal):
     def _prepare_portal_layout_values(self):
         values = super(DocPortal, self)._prepare_portal_layout_values()
         partner = request.env.user.partner_id
-        reports_name = ast.literal_eval(partner.reports_name)
+        reports_name = []
+        if partner.reports_name and len(partner.reports_name)>0:
+            reports_name = ast.literal_eval(partner.reports_name)
+
         report = request.env['ir.actions.report'].search([('report_name','in',reports_name)])
         values.update({"doc_count":len(report),
                        'title': _("Documents"),
@@ -28,6 +31,10 @@ class DocPortal(CustomerPortal):
     @http.route('/my/doc', type='http', auth="user", website=True)
     def contactus(self, **kwargs):
         partner = request.env.user.partner_id
+        reports_name = []
+        if partner.reports_name and len(partner.reports_name)>0:
+            reports_name = ast.literal_eval(partner.reports_name)
+
         reports_name = ast.literal_eval(partner.reports_name)
         reports = request.env['ir.actions.report'].search([('report_name','in',reports_name)])
         values={}

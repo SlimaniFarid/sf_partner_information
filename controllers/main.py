@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
-
+from odoo import models, fields, api
 from odoo import http
 from odoo.http import request
 from odoo.addons.website_crm.controllers.main import WebsiteForm
@@ -30,25 +30,70 @@ class WebsiteForm(WebsiteForm):
     def contactus(self, **kwargs):
         return request.render("website_crm.contactus_form")
       
+    def get_country(self):
+        return request.env['res.country'].sudo().search([])  
+
+    def get_state(self):
+        return request.env['res.country.state'].sudo().search([]) 
+
+
     @http.route('/my_form_nie', type='http', auth="user", website=True)
     def my_form_nie(self, **kwargs):
-        return request.render("sf_partner_information.nie_form")
+
+        values = {'countries':self.get_country(),
+                  'states'  : self.get_state(),
+                }
+
+
+        return request.render("sf_partner_information.nie_form",values)
       
 
 
     # Check and insert values from the form on the model <model> + validation phone fields
     @http.route('/form_nie', type='http', auth="user", methods=['POST'], website=True, csrf=False)
     def form_nie(self, **kwargs):
-        user = request.env['res.users'].search([('id','=',request.session.uid)])    
-        user.partner_id.write({
-                               'Place_of_birth':kwargs.get('Place_of_birth'),
-                               'Passport_delivery_date':kwargs.get('Passport_delivery_date'),
-                               'Passport_delivery_date':kwargs.get('Passport_delivery_date'),
-                               'specify':kwargs.get('specify'),
-                               'reports_name':"['sf_partner_information.report_formulaire']"
-                             
-        })
+        val = {     
+                'lastname'                      : kwargs.get('lastname'),
+                'lastname2'                     : kwargs.get('lastname2'),
+                'firstname'                     : kwargs.get('firstname'),
+                'reports_name'                  :"['sf_partner_information.report_formulaire']",
+                'family_situation'              : kwargs.get('family_situation'),
+                'country_of_birth_id'           : kwargs.get('country_of_birth_id'),
+                'Place_of_birth'                : kwargs.get('Place_of_birth'),
+                'Profession'                    : kwargs.get('Profession'),
+                'passport_number'               : kwargs.get('passport_number'),
+                'delivered_by'                  : kwargs.get('delivered_by'),
+                'Passport_delivery_date'        : kwargs.get('Passport_delivery_date'),
+                'Passport_expiration_date'      : kwargs.get('Passport_expiration_date'),
+                'Spouses_name'                  : kwargs.get('Spouses_name'),
+                'Fathers_name'                  : kwargs.get('Fathers_name'),
+                'document_type'                 : kwargs.get('document_type'),
+                'reasons'                       : kwargs.get('reasons'),
+                'specify'                       : kwargs.get('specify'),                                                 
+                'place_of_presentation'         : kwargs.get('place_of_presentation'),                                                                
+                'building_no'                   : kwargs.get('building_no'),
+                'floor_no'                      : kwargs.get('floor_no'),
+                'mothers_name'                  : kwargs.get('mothers_name'),
+                'request_nie'                   : fields.Date.today(),
+                }
        
+        user = request.env['res.users'].search([('id','=',request.session.uid)])    
+        child = False
+        user.partner_id.write({'reports_name' : "['sf_partner_information.report_formulaire']",})
+
+        for c in user.partner_id.child_ids:
+            if c.type=="private":
+                child = c 
+        if not child :
+            user.partner_id.child_ids = [(0,0,val)] 
+        else :
+            child.write(val)       
+    
+
+
+
+
+
         return request.render("sf_partner_information.nie_form_thanks")
         
 

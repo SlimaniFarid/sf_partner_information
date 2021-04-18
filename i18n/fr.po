@@ -1,0 +1,761 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sf_partner_information
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191230\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-08 14:11+0000\n"
+"PO-Revision-Date: 2021-04-08 14:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form_thanks
+msgid "&amp;times;"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#, python-format
+msgid "&times;"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "06669895623"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "123456789"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "15697542336"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "35000"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "444653626956123126"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form_thanks
+msgid "<i class=\"fa fa-download\"/> Download"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid ""
+"<span id=\"fisrt_appllido\">karim</span> \n"
+"\n"
+"                <span id=\"second_appllido\">krimo</span>"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid ""
+"<span id=\"nom_madre\">mmmmmmmmmm</span> \n"
+"                <span id=\"nom_madre\">mmmmmmmmmm</span>"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "<span id=\"num\">numero</span>"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid ""
+"<span id=\"pais\">algerie</span>\n"
+"               \n"
+"               \n"
+"               \n"
+"               <span id=\"domicilo_es\">boumerdes</span>"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__building_no
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__building_no
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.view_partner_form_inherit
+#, python-format
+msgid "Building N°"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__specify__buy_hous
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Buy hous"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "City"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__specify__company_creation
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Company creation"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__place_of_presentation__consular_office
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Consular office"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model,name:sf_partner_information.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Country"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__country_of_birth_id
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__country_of_birth_id
+msgid "Country of birth"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Country..."
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__delivered_by
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__delivered_by
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Delivered by"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__family_situation__divorced
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Divorced"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/portal_my_doc.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.portal_my_home_doc
+#, python-format
+msgid "Document"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__document_type
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__document_type
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Document type"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/controllers/portal.py:0
+#: code:addons/sf_partner_information/static/src/xml/portal_my_doc.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.portal_my_doc
+#, python-format
+msgid "Documents"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/portal_my_doc.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.portal_my_doc
+#, python-format
+msgid "Documents #"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/portal_my_doc.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form_thanks
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.portal_my_doc
+#, python-format
+msgid "Download"
+msgstr "Télécharger"
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Email"
+msgstr "Courriel"
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__Profession__employee
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Employee"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__Profession__entrepreneur
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Entrepreneur"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__family_situation
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__family_situation
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Family situation"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__Fathers_name
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__Fathers_name
+msgid "Father's name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Fathers name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/website_blog.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_blog.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.blog_post_content
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.post_heading
+#, python-format
+msgid "Fill in the form"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "First name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__floor_no
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__floor_no
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.view_partner_form_inherit
+#, python-format
+msgid "Floor N°"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__reasons
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__reasons
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__reasons__for_economic_interests
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "For economic interests"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__reasons__for_professional_interests
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "For professional interests"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__reasons__for_social_interests
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "For social interests"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__foreigner_identity_number
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__foreigner_identity_number
+msgid "Foreigner Identity Number (NIE)"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#, python-format
+msgid "Foreigner identity number"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__place_of_presentation__immigration_office
+msgid "Immigration Office"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Immigration office"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Last name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__lastname2
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__lastname2
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Last name (2)"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__family_situation__married
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Married"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.actions.report,name:sf_partner_information.report_form_card
+msgid "Model insecription form"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__mothers_name
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__mothers_name
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Mother's name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__specify__open_bank_account
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Open bank account"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__specify__other
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Other"
+msgstr "Autre"
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__Passport_delivery_date
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__Passport_delivery_date
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Passport delivery date"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__Passport_expiration_date
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__Passport_expiration_date
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Passport expiration date"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__passport_number
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__passport_number
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Passport number"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__Place_of_birth
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__Place_of_birth
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Place of birth"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__place_of_presentation
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__place_of_presentation
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Place of presentation"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__place_of_presentation__police_station
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Police station"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__Profession
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__Profession
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Profession"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Reasons"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__request_nie
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__request_nie
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Request NIE"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__Profession__retired
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Retired"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__Profession__sector
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Sector"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Send"
+msgstr "Envoyer"
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__family_situation__separated
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Separated"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__family_situation__single
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Single"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__specify
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__specify
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Specify"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__Spouses_name
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__Spouses_name
+msgid "Spouse's name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Spouses name"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "State / Province"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "State / Province..."
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#, python-format
+msgid "Street"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Street 2"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+msgid "Street <span class=\"d-none d-md-inline\"> and Number</span>"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__Profession__student
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Student"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/website_crm.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Studies"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form_thanks
+#, python-format
+msgid "Thanks !"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form_thanks
+#, python-format
+msgid "We will get back to you shortly."
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__family_situation__widow
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Widow / Widower"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form_thanks
+#, python-format
+msgid "Your message has been sent successfully."
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.nie_form
+#, python-format
+msgid "Zip Code"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "alger"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/nie_form_template.xml:0
+#, python-format
+msgid "and Number"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "kiche"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "non de client"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "pppppppp"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_partner__reports_name
+#: model:ir.model.fields,field_description:sf_partner_information.field_res_users__reports_name
+msgid "reports name"
+msgstr ""
+
+#. module: sf_partner_information
+#: model_terms:ir.ui.view,arch_db:sf_partner_information.report_formulaire
+msgid "russia"
+msgstr ""
+
+#. module: sf_partner_information
+#: model:ir.model.fields.selection,name:sf_partner_information.selection__res_partner__specify__studies
+msgid "studies"
+msgstr ""
+
+#. module: sf_partner_information
+#. openerp-web
+#: code:addons/sf_partner_information/static/src/xml/website_blog.xml:0
+#, python-format
+msgid ""
+"text-reset text-decoration-none o_blog_post_title my-0 #{'h3' if "
+"opt_blog_list_view else ('h5' if opt_blog_readable else 'h6')}"
+msgstr ""

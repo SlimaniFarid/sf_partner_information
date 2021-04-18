@@ -12,88 +12,134 @@
 
                 <div class="page" t-attf-style="background-image:url('/sf_partner_information/static/src/img/background_form.jpg');
                 width: 100%; height: 1300px; background-size: 105%;">
-                 <!--210 x 297  width: 100%; height: 1300px;-->
                 
-                <span id="NIE" t-field=" o.foreigner_identity_number">123456789</span>
 
-                <span id="N_pass" t-field="o.passport_number">15697542336</span>
+                 <!-- first bloc-->
+                <t t-foreach="o.child_ids" t-as="child">
+                <t t-if="child.type=='private'">
+                
+                <span id="NIE" t-esc=" child.foreigner_identity_number"></span>
 
-                <span id="fisrt_appllido">karim</span> 
+                <span id="N_pass" t-esc="child.passport_number"></span>
+          
+                <span id="fisrt_appllido" t-esc=" child.lastname"></span> 
 
-                <span id="second_appllido">krimo</span>
+                <span id="second_appllido" t-esc=" child.lastname2"></span>
+               
 
-                <span id="nombre" t-field="o.name">kiche</span> 
+                <span id="nombre" t-esc="child.firstname"></span> 
 
-
-                <t t-if="o.gender=='male'">
-                <span id="sexo1"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                <t t-if="child.gender=='male'">
+                    <span id="sexo1"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="o.gender=='female'">
+                    <span id="sexo2"> <i class="fa fa-check" aria-hidden="true"></i></span> 
                  </t>
-                <span id="ficha" t-field="o.birthdate_date">444653626956123126</span> 
+                <span id="ficha" t-esc="child.birthdate_date"></span> 
 
-                <span id="lugar" t-field="o.Place_of_birth">alger</span> 
+                <span id="lugar" t-esc="child.Place_of_birth"></span> 
+                <span id="pais" t-esc="child.country_of_birth_id.name" ></span>
 
+               
+               
+               <span id="telephone" t-esc="child.phone"></span>
+
+               <span id="email" t-esc="child.email"></span> 
                 
+               <span id="num" t-esc="child.building_no" ></span> 
+               <span id="piso" t-esc="child.floor_no"> </span>
 
+               <span id="domicilo_es" t-esc="child.street"></span>
 
-
-
-               
-               <span id="pais">algerie</span>
-               
-               
-               
-               <span id="domicilo_es">boumerdes</span>
-               <span id="telephone" t-field="o.phone">06669895623</span>
-               <span id="email" t-field="o.email"></span> 
-               <span id="cp" t-field="o.zip">35000</span> 
-               <span id="num" >numero</span> 
+               <span id="cp_1" t-esc="child.zip[0]"></span>
+               <span id="cp_2" t-esc="child.zip[1]"></span>
+               <span id="cp_3" t-esc="child.zip[2]"></span>
+               <span id="cp_4" t-esc="child.zip[3]"></span>
+               <span id="cp_5" t-esc="child.zip[4]"></span>
 
                
+               <span id="localidad" t-esc="child.city"></span>
+               <span id="localidad_2" t-esc="child.city"></span>
+
+               <span id="provincia" t-esc="child.state_id.name"></span>
+
+
+                <span id="nationalida"   t-esc="child.nationality_id.name" ></span> 
                 
+                <t t-if="child.family_situation=='single'">
+                    <span id="estado_civil_s"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.family_situation=='married'">
+                    <span id="estado_civil_m"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.family_situation=='divorced'">
+                    <span id="estado_civil_d"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.family_situation=='widow'">
+                    <span id="estado_civil_v"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.family_situation=='separated'">
+                    <span id="estado_civil_sp"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <span id="nom_padre"  t-esc="child.Fathers_name" ></span> 
+                <span id="nom_madre" t-esc="child.mothers_name"></span>
 
 
 
+                <!-- second form-->
+
+                <span id="nombre_t2" t-esc="child.name"></span>
+                <span id="N_pass_t2" t-esc="child.passport_number"></span>
+                <span id="domicilo_es_t2" t-esc="child.street"></span>
+                <span id="localidad_t2" t-esc="child.city"></span>
+
+                 <span id="cp2_1" t-esc="child.zip[0]"></span>
+                <span id="cp2_2" t-esc="child.zip[1]"></span>
+                <span id="cp2_3" t-esc="child.zip[2]"></span>
+                <span id="cp2_4" t-esc="child.zip[3]"></span>
+                <span id="cp2_5" t-esc="child.zip[4]"></span>
+
+                <span id="provincia_t2" t-esc="child.state_id.name"></span>
+                <span id="telephone_t2" t-esc="child.phone"></span>
+                <span id="email_t2" t-esc="child.email"></span>
+
+
+                <!--case a  coché-->
+                <t t-if="child.reasons=='For_economic_interests'">
+                    <span id="reasons_eco"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.reasons=='for_professional_interests'">
+                    <span id="reasons_pro"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.reasons=='for_social_interests'">
+                    <span id="reasons_soc"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+
+                 <!--4.3-->
+                <t t-if="child.place_of_presentation=='immigration_Office'">
+                    <span id="immigration_office"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.place_of_presentation=='police_station'">
+                    <span id="police_station"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <t t-if="child.place_of_presentation=='consular_office'">
+                    <span id="consular_office"> <i class="fa fa-check" aria-hidden="true"></i></span> 
+                </t>
+                <span id="document"> <i class="fa fa-check" aria-hidden="true"></i></span>
+               
+                <span id="day" t-esc="datetime.datetime.strptime(str(child.request_nie), '%Y-%m-%d').strftime('%d')" ></span>
+                <span id="month" t-esc="datetime.datetime.strptime(str(child.request_nie), '%Y-%m-%d').strftime('%B')" ></span>
+                <span id="year"  t-esc="datetime.datetime.strptime(str(child.request_nie), '%Y-%m-%d').strftime('%Y')"></span>
+               
 
 
 
-
-                <span id="nationalida"   t-field="o.nationality_id" >russia</span> 
-
-                <span id="estado_civil" t-field="o.family_situation">non de client</span> 
-
-                <span id="nom_padre"  t-field="o.Fathers_name" >pppppppp</span> 
-                <span id="nom_madre">mmmmmmmmmm</span> 
-                <span id="nom_madre">mmmmmmmmmm</span> 
-                 
+                </t>
+                </t>
                  
                 
                 </div>
 
-               <!-- <div class="backgroundimage">
-                    <img src="/partner_report/static/description/background_form.jpg"/>
-                    <h1>dhjdfyhjldfjkklmhdkfhmk</h1>
-                </div>-->
-
-
-                <!--
-
-                      <t t-foreach="o.child_ids" t-as="child">
-                    
-               
-               <t t-if="child.type=='private'">
-               <span id="pais" t-esc="child.country_id">algerie</span>
-               
-               <span id="pais" t-esc="child.country_id" />
-               
-               <span id="domicilo_es"></span>
-               <span id="telephone" t-esc="child.phone"></span>
-               <span id="email" t-esc="child.email"></span> 
-               
-               </t>
-               
-                
-                 </t>
-                -->
                 
       
              </t>

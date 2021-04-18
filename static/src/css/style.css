@@ -94,6 +94,7 @@ position:absolute;font-size:3em;width:50%;height:100%;z-index:1000;
     line-height:6px;
    
 } 
+
 #telephone{
     position: fixed;
     top:392px;
@@ -101,28 +102,296 @@ position:absolute;font-size:3em;width:50%;height:100%;z-index:1000;
     line-height:6px;
    
 } 
-#cp{
+
+#cp_1{
     position: fixed;
     top:370px;
     left:605px;
     line-height:6px;
    
 } 
+#cp_2{
+    position: fixed;
+    top:370px;
+    left:626px;
+    line-height:6px;
+   
+} 
+#cp_3{
+    position: fixed;
+    top:370px;
+    left:644px;
+    line-height:6px;
+   
+} 
+#cp_4{
+    position: fixed;
+    top:370px;
+    left:662px;
+    line-height:6px;
+   
+} 
+#cp_5{
+    position: fixed;
+    top:370px;
+    left:680px;
+    line-height:6px;
+   
+} 
+
 #num{
     position: fixed;
     top:345px;
-    left:628px;
+    left:632px;
     line-height:6px;
     
    
 } 
+#piso{
+    position: fixed;
+    top:345px;
+    left:740px;
+    line-height:6px;
+    
+
+}
 #sexo1{
     position: fixed;
     top:248px;
     left:820px;
     line-height:6px;
-    
+}
+#sexo2{
+    position: fixed;
+    top:248px;
+    left:883px;
+    line-height:6px;
+}
+#localidad{
+    position: fixed;
+    top:368px;
+    left:115px;
+    line-height:6px;
+   
+} 
+#localidad_2{
+    position: fixed;
+    top:1142px;
+    left:272px;
+    line-height:6px;
+   
+} 
+#provincia{
+    position: fixed;
+    top:368px;
+    left:760px;
+    line-height:6px;
+   
+}
 
+#domicilo_es{
+    position: fixed;
+    top:345px;
+    left:158px;
+    line-height:6px;
+   
+} 
+
+#estado_civil_s{
+     position: fixed;
+    top:318px;
+    left:713px;
+    line-height:6px;
 
 
 }
+#estado_civil_m{
+     position: fixed;
+    top:318px;
+    left:755px;
+    line-height:6px;
+
+
+}
+#estado_civil_v{
+    position: fixed;
+   top:318px;
+   left:800px;
+   line-height:6px;
+
+
+}
+#estado_civil_d{
+     position: fixed;
+    top:318px;
+    left:840px;
+    line-height:6px;
+
+
+}
+#estado_civil_sp{
+     position: fixed;
+    top:318px;
+    left:885px;
+    line-height:6px;
+
+
+}
+
+
+
+#nombre_t2{
+    position: fixed;
+    top:600px;
+    left:163px;
+    line-height:2px;
+   
+} 
+#email_t2{
+    position: fixed;
+    top:668px;
+    left:550px;
+    line-height:6px;
+   
+} 
+#cp2_1{
+    position: fixed;
+    top:645px;
+    left:590px;
+    line-height:6px;
+   
+} 
+#cp2_2{
+    position: fixed;
+    top:645px;
+    left:607px;
+    line-height:6px;
+   
+} 
+#cp2_3{
+    position: fixed;
+    top:645px;
+    left:625px;
+    line-height:6px;
+   
+}
+ 
+#cp2_4{
+    position: fixed;
+    top:645px;
+    left:645px;
+    line-height:6px;
+   
+} 
+#cp2_5{
+    position: fixed;
+    top:645px;
+    left:665px;
+    line-height:6px;
+   
+} 
+#telephone_t2{
+    position: fixed;
+    top:668px;
+    left:127px;
+    line-height:6px;
+   
+} 
+#domicilo_es_t2{
+    position: fixed;
+    top:622px;
+    left:159px;
+    line-height:6px;
+   
+} 
+#provincia_t2{
+    position: fixed;
+    top:645px;
+    left:763px;
+    line-height:6px;
+   
+}  
+#N_pass_t2{
+    position: fixed;
+    top:590px;
+    left:775px;
+
+}
+#localidad_t2{
+    position: fixed;
+    top:645px;
+    left:115px;
+    line-height:6px;
+   
+} 
+#document{
+    position: fixed;
+    top:785px;
+    left:87px;
+    line-height:6px;
+   
+}
+#reasons_eco{
+    position: fixed;
+    top:890px;
+    left:107px;
+    line-height:6px;
+   
+}
+#reasons_pro{
+    position: fixed;
+    top:890px;
+    left:420px;
+    line-height:6px;
+   
+}
+#reasons_soc{
+    position: fixed;
+    top:890px;
+    left:645px;
+    line-height:6px;
+   
+}
+#immigration_office{
+    position: fixed;
+    top:995px;
+    left:107px;
+    line-height:6px;
+   
+}
+#police_station{
+    position: fixed;
+    top:995px;
+    left:362px;
+    line-height:6px;
+   
+}
+#consular_office{
+    position: fixed;
+    top:995px;
+    left:645px;
+    line-height:6px;
+   
+}
+#day{
+    position: fixed;
+    top:1143px;
+    left:425px;
+    line-height:6px;
+   
+}
+#month{
+    position: fixed;
+    top:1143px;
+    left:500px;
+    line-height:6px;
+   
+}
+#year{
+    position: fixed;
+    top:1143px;
+    left:620px;
+    line-height:6px;
+   
+}
+

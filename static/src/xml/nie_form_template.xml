@@ -18,13 +18,28 @@
                     <div class="row">
                     <div class="col-lg-8">
                         <form id="helpdesk_ticket_form" action="/form_nie" method="post" enctype="multipart/form-data"  hide-change-model="false" >
-                          
                              <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
                                 <div class="col-lg-3 col-md-4">
-                                    <label class="col-form-label" for="Name">Your Name</label>
+                                    <label class="col-form-label" for="lastname">Last name</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="Name" required=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="lastname" required=""/>
+                                </div>
+                            </div>
+                            <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="lastname2">Last name (2)</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="lastname2" required=""/>
+                                </div>
+                            </div>
+                             <div class="form-group row form-field o_website_form_custom o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="firstname">First name</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="firstname" required=""/>
                                 </div>
                             </div>
                             <div class="form-group row form-field o_website_form_custom">
@@ -44,12 +59,110 @@
                                 </div>
                             </div>
 
+                             <div class="form-group row form-field o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="street">Street <span class="d-none d-md-inline"> and Number</span></label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" name="street" t-attf-class="form-control"/>
+                                </div>    
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label label-optional" for="street2">Street 2</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">    
+                                    <input type="text" name="street2" t-attf-class="form-control"/>
+                                </div>    
+                            </div>
+                          
+                            <t t-set='zip_city' t-value='country and [x for x in country.get_address_fields() if x in ["zip", "city"]] or ["city", "zip"]'/>
+                            <t t-if="'zip' in zip_city and zip_city.index('zip') &lt; zip_city.index('city')">
+                                <div class="form-group row form-field o_website_form_required_custom">
+                                    <div class="col-lg-3 col-md-4">
+                                        <label class="col-form-label label-optional" for="zip">Zip Code</label>
+                                    </div>
+                                    <div class="col-lg-7 col-md-8">     
+                                        <input type="text" name="zip" t-attf-class="form-control" t-att-value="'zip' in checkout and checkout['zip']" />
+                                    </div>
+                                </div>
+                            </t>
+                            <div class="form-group row form-field o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4">    
+                                    <label class="col-form-label" for="city">City</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">   
+                                    <input type="text" name="city" t-attf-class="form-control" value="city" />
+                                </div>    
+                            </div>
+
+                            <t t-if="'zip' in zip_city and zip_city.index('zip') &gt; zip_city.index('city')">
+                                <div class="form-group row form-field o_website_form_required_custom">
+                                    <div class="col-lg-3 col-md-4"> 
+                                        <label class="col-form-label label-optional" for="zip">Zip Code</label>
+                                    </div>  
+                                    <div class="col-lg-7 col-md-8">   
+                                        <input type="text" name="zip" t-attf-class="form-control" value="zip" />
+                                    </div>
+                                </div>
+                            </t>
+              
+                            <div t-attf-class="form-group row form-field o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4"> 
+                                    <label class="col-form-label" for="country_id">Country</label>
+                                </div>  
+                                <div class="col-lg-7 col-md-8">  
+                                    <select id="country_id" name="country_id" t-attf-class="form-control">
+                                        <option value="">Country...</option>
+                                        <t t-foreach="countries" t-as="c">
+                                            <option t-att-value="c.id" t-att-selected="c.id == (country and country.id or -1)">
+                                                <t t-esc="c.name" />
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>    
+                            </div>
+                            <div class="form-group row form-field o_website_form_required_custom">
+                                <div class="col-lg-3 col-md-4"> 
+                                    <label class="col-form-label" for="state_id">State / Province</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">     
+                                    <select name="state_id" t-attf-class="form-control" data-init="1">
+                                        <option value="">State / Province...</option>
+                                        <t t-foreach="states" t-as="s">
+                                            <option t-att-value="s.id">
+                                                <t t-esc="s.name" />
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>    
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="building_no">Building N°</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="building_no" requireddd="1"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="floor_no">Floor N°</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="floor_no" requireddd="1"/>
+                                </div>
+                            </div>
+
                             <div class="form-group row form-field o_website_form_requireddd_custom">
                                 <div class="col-lg-3 col-md-4">
                                     <label class="col-form-label" for="Place_of_birth">Place of birth</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="Place_of_birth" requireddd=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="Place_of_birth" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -63,6 +176,8 @@
                                         <option value="single">Single</option>
                                         <option value="married">Married</option>
                                         <option value="divorced">Divorced</option>
+                                        <option value="widow">Widow / Widower</option>
+                                        <option value="separated">Separated</option>
                                     </select>
                                 </div>
                             </div>
@@ -71,7 +186,7 @@
                                     <label class="col-form-label" for="Profession">Profession</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <select class="form-control o_website_form_input" name="Profession" id="Profession" requireddd="">
+                                    <select class="form-control o_website_form_input" name="Profession" id="Profession" requireddd="1">
                                         <option></option>
                                         <option value="entrepreneur">Entrepreneur</option>
                                         <option value="student">Student</option>
@@ -87,7 +202,7 @@
                                     <label class="col-form-label" for="Spouses_name">Spouses name</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="Spouses_name" requireddd=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="Spouses_name" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -96,7 +211,16 @@
                                     <label class="col-form-label" for="Fathers_name">Fathers name</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="Fathers_name" requireddd=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="Fathers_name" requireddd="1"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row form-field o_website_form_requireddd_custom">
+                                <div class="col-lg-3 col-md-4">
+                                    <label class="col-form-label" for="mothers_name">Mother's name</label>
+                                </div>
+                                <div class="col-lg-7 col-md-8">
+                                    <input type="text" class="form-control o_website_form_input" name="Fathers_name" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -105,7 +229,7 @@
                                     <label class="col-form-label" for="document_type">Document type</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="document_type" requireddd=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="document_type" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -114,7 +238,7 @@
                                     <label class="col-form-label" for="reasons">Reasons</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <select class="form-control o_website_form_input" name="reasons" id="reasons" requireddd="">
+                                    <select class="form-control o_website_form_input" name="reasons" id="reasons" requireddd="1">
                                         <option></option>
                                         <option value="For_economic_interests">For economic interests</option>
                                         <option value="for_professional_interests">For professional interests</option>
@@ -128,7 +252,7 @@
                                     <label class="col-form-label" for="specify">Specify</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <select class="form-control o_website_form_input" name="specify" id="specify" requireddd="">
+                                    <select class="form-control o_website_form_input" name="specify" id="specify" requireddd="1">
                                         <option></option>
                                         <option value="company_creation">Company creation</option>
                                         <option value="studies">Studies</option>
@@ -144,7 +268,7 @@
                                     <label class="col-form-label" for="place_of_presentation">Place of presentation</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <select class="form-control o_website_form_input" name="place_of_presentation" id="place_of_presentation" requireddd="">
+                                    <select class="form-control o_website_form_input" name="place_of_presentation" id="place_of_presentation" requireddd="1">
                                         <option></option>
                                         <option value="immigration_Office">Immigration office</option>
                                         <option value="police_station">Police station</option>
@@ -157,7 +281,7 @@
                                     <label class="col-form-label" for="passport_number">Passport number</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="passport_number" requireddd=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="passport_number" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -166,7 +290,7 @@
                                     <label class="col-form-label" for="delivered_by">Delivered by</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="delivered_by" requireddd=""/>
+                                    <input type="text" class="form-control o_website_form_input" name="delivered_by" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -175,7 +299,7 @@
                                     <label class="col-form-label" for="Passport_delivery_date">Passport delivery date</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="date" class="form-control o_website_form_input" name="Passport_delivery_date" requireddd=""/>
+                                    <input type="date" class="form-control o_website_form_input" name="Passport_delivery_date" requireddd="1"/>
                                 </div>
                             </div>
 
@@ -184,19 +308,9 @@
                                     <label class="col-form-label" for="Passport_expiration_date">Passport expiration date</label>
                                 </div>
                                 <div class="col-lg-7 col-md-8">
-                                    <input type="date" class="form-control o_website_form_input" name="Passport_expiration_date" requireddd=""/>
+                                    <input type="date" class="form-control o_website_form_input" name="Passport_expiration_date" requireddd="1"/>
                                 </div>
                             </div>
-
-                            <div class="form-group row form-field o_website_form_requireddd_custom">
-                                <div class="col-lg-3 col-md-4">
-                                    <label class="col-form-label" for="foreigner_identity_number">Foreigner identity number</label>
-                                </div>
-                                <div class="col-lg-7 col-md-8">
-                                    <input type="text" class="form-control o_website_form_input" name="foreigner_identity_number" requireddd=""/>
-                                </div>
-                            </div>
-                          
 
                             <div class="form-group row">
                                 <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
